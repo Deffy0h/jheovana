@@ -11,4 +11,5 @@ gerador de wordlist, personalize sua própria wordlist baseado em sua vítima e 
             	-================================================-
             	\t\tCreate By Deffy0h
             	-================================================-
-            	use: jheovana.pl -m 'dog;fruts;money' -max '10' -save 'wordlist.txt'
+            	
+            	use: jheovana.pl -m|mode 'dog;fruts;money' -mm|max '10' -s|save 'wordlist.txt'

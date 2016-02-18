@@ -20,7 +20,7 @@ my $banner="
 
 ";
 my $mode="
-	use: jheovana.pl -m 'dog;fruts;money' -max '10' -save 'wordlist.txt'
+	use: jheovana.pl -m|mode 'dog;fruts;money' -mm|max '10' -s|save 'wordlist.txt'
 ";
 
 #variable
@@ -65,22 +65,70 @@ my @w=split /;/,$m;
 my $bb=scalar(@w);
 my $c=0;
 my $rud;
+my $red;
+my $r;
+my $wn;
+my $ts;
+my $arr;
+my $tol;
+
+while($ts<$bb){
+$wn=@w[$ts];
+for($arr=0;$arr<$bb;$arr++){
+$ran=$wn.@w[$arr];
+print $ran."\n";
+$tol=$tol.$ran."\n";
+}
+$ran="";
+#print "end for";
+#print $ran."\n";
+#print $wn."\n";
+$ts++;
+$arr++
+}
+
+#my $tss;
+#my $wnn;
+#my $rann;
+#my $bol;
+#my $rtol;
+#my $fo;
+#while($tts<$bb){
+#$wnn=@w[$tss];
+#for($i=0;$i<$bb;$i++){
+#$rann=@w[2].@w[$i];
+#print $rann."\n";
+#}
+#$bol="";
+#print $rann."\n";
+#$rtol=$rtol.$rann;
+#$rann="";
+#$tts++;
+#$arri++
+#}
+
 while($ii<$max){
 while($c<$bb){
 $rud=$rud.@w[int(rand($bb))];
 $c++;
 }
 $c=0;
-print $rud."\n";
 $clod=$clod.$rud."\n";
+print $rud."\n";
 if($save!~/.txt$/){
 $save="wordlist.txt";
 }
+#open($f,"<",$save) or die("\nfile no exists\n");
 open($a,">",$save);
+#my $uf=<$f>;
+#while($uf!~m/$rud/g){
+$a->print($tol);
+#$a->print($rtol);
 $a->print($clod);
+#}
 $a->close;
 $rud="";
-$ii++;
+$ii=$ii+2;
 }
 ppp();
 }
